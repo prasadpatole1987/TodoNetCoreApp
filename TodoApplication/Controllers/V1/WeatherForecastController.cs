@@ -4,8 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using TodoApplication.Contracts.V1;
 
-namespace TodoApplication.Controllers
+namespace TodoApplication.Controllers.V1
 {
     [ApiController]
     [Route("[controller]")]
@@ -23,7 +24,7 @@ namespace TodoApplication.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet(ApiRoutes.WeatherForecast.GetAll)]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
