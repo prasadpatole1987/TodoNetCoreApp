@@ -1,2 +1,4 @@
 # list of files to be ignored
 */.vs/
+*/obj/*
+*/bin/
