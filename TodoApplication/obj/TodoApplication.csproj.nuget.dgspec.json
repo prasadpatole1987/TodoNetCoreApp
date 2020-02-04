@@ -4,14 +4,79 @@
     "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApplication\\TodoApplication.csproj": {}
   },
   "projects": {
-    "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApplication\\TodoApplication.csproj": {
+    "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.BLL\\TodoApp.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApplication\\TodoApplication.csproj",
-        "projectName": "TodoApplication",
-        "projectPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApplication\\TodoApplication.csproj",
+        "projectUniqueName": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.BLL\\TodoApp.BLL.csproj",
+        "projectName": "TodoApp.BLL",
+        "projectPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.BLL\\TodoApp.BLL.csproj",
         "packagesPath": "C:\\Users\\prasa\\.nuget\\packages\\",
-        "outputPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApplication\\obj\\",
+        "outputPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\prasa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.DAL\\TodoApp.DAL.csproj": {
+                "projectPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.DAL\\TodoApp.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.DAL\\TodoApp.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.DAL\\TodoApp.DAL.csproj",
+        "projectName": "TodoApp.DAL",
+        "projectPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.DAL\\TodoApp.DAL.csproj",
+        "packagesPath": "C:\\Users\\prasa\\.nuget\\packages\\",
+        "outputPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +106,86 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApplication\\TodoApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApplication\\TodoApplication.csproj",
+        "projectName": "TodoApplication",
+        "projectPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApplication\\TodoApplication.csproj",
+        "packagesPath": "C:\\Users\\prasa\\.nuget\\packages\\",
+        "outputPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApplication\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\prasa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.BLL\\TodoApp.BLL.csproj": {
+                "projectPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.BLL\\TodoApp.BLL.csproj"
+              },
+              "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.DAL\\TodoApp.DAL.csproj": {
+                "projectPath": "E:\\Practice\\Microsoft\\Net_Core\\TodoNetCoreApp\\TodoApp.DAL\\TodoApp.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.0.0, )"

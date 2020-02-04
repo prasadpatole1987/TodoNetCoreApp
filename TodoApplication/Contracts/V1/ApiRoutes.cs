@@ -14,9 +14,14 @@ namespace TodoApplication.Contracts.V1
         public const string Base = root +"/" + version;
 
 
-        public static class WeatherForecast
+        public static class Todo
         {
-            public const string GetAll = Base+"/WeatherForecast";
+            public const string GetAll = Base + "/Todo";
+
+            public const string Get = Base + "/Todo/{id}";
+
+            public const string Create = Base + "/Todo";
+
         }
     }
 }
