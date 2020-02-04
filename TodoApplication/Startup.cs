@@ -27,7 +27,7 @@ namespace TodoApplication
             services.AddScoped<ApiDbContext>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             //services.AddTransient(ITodoService, TodoService);
-
+            services.AddTransient<ITodoService, TodoService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

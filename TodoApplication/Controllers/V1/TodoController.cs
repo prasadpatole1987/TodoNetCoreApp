@@ -35,25 +35,14 @@ namespace TodoApplication.Controllers.V1
             return Ok(todo);
         }
 
-        //[HttpPost(ApiRoutes.Todo.Create)]
-        //public IActionResult Post([FromBody] TodoRequest todoRequest)
-        //{
-        //    Todo todo = new Todo();
-        //    if (todoRequest.Id == null || todoRequest.Id == Guid.Empty)
-        //    {
-        //        todo.Id = Guid.NewGuid();
-        //    }
-            
-        //    todo.Description = todoRequest.Description;
-        //    todo.Title = todoRequest.Title;
-        //    todo.IsComplete = todoRequest.IsComplete;
+        [HttpPost(ApiRoutes.Todo.Create)]
+        public IActionResult Post([FromBody] TodoRequest todoRequest)
+        {
+            var result = this._todoService.Insert(todoRequest);
 
-        //    _context.Todos.Add(todo);
-        //    _context.SaveChanges();
-
-        //    var baseUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host.ToUriComponent()}";
-        //    var locationUrl = baseUrl + ApiRoutes.Todo.Get.Replace("{id}", todo.Id.ToString());
-        //    return Created(locationUrl, todo);
-        //}
+            var baseUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host.ToUriComponent()}";
+            var locationUrl = baseUrl + ApiRoutes.Todo.Get.Replace("{id}", result.Id.ToString());
+            return Created(locationUrl, result);
+        }
     }
 }
