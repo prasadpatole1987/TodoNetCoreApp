@@ -56,5 +56,16 @@ namespace TodoApplication.Controllers.V1
 
             return Ok(todoRequest);
         }
+
+        [HttpDelete(ApiRoutes.Todo.Delete)]
+        public IActionResult Delete([FromRoute] Guid id)
+        {
+            var deleted = this._todoService.Delete(id);
+
+            if (deleted)
+                return NoContent();
+
+            return NotFound();
+        }
     }
 }

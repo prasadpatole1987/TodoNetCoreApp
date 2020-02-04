@@ -17,10 +17,15 @@ namespace TodoApp.BLL
             this._repository = repository;
         }
 
-        public void Delete(Guid id)
+        public bool Delete(Guid id)
         {
             var todo = this._repository.GetAll().SingleOrDefault(t => t.Id == id);
-            this._repository.Delete(todo);
+            if (todo != null)
+            {
+                this._repository.Delete(todo);
+                return true;
+            }
+            return false;
         }
 
         public TodoRequest Get(Guid id)

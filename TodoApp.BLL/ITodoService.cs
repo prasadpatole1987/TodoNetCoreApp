@@ -14,6 +14,6 @@ namespace TodoApp.BLL
 
         void Update(TodoRequest todoRequest);
 
-        void Delete(Guid id);
+        bool Delete(Guid id);
     }
 }
