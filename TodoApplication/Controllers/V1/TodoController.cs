@@ -44,5 +44,17 @@ namespace TodoApplication.Controllers.V1
             var locationUrl = baseUrl + ApiRoutes.Todo.Get.Replace("{id}", result.Id.ToString());
             return Created(locationUrl, result);
         }
+
+        [HttpPut(ApiRoutes.Todo.Update)]
+        public IActionResult Put([FromRoute] Guid id, [FromBody] TodoRequest todoRequest)
+        {
+            var todo = _todoService.Get(id);
+            if (todo == null)
+                return NotFound(); ;
+
+            this._todoService.Update(todoRequest);
+
+            return Ok(todoRequest);
+        }
     }
 }

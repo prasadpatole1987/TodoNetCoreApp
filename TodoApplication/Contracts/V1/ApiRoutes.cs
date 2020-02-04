@@ -22,6 +22,11 @@ namespace TodoApplication.Contracts.V1
 
             public const string Create = Base + "/Todo";
 
+            public const string Update = Base + "/Todo/{id}";
+
+            public const string Delete = Base + "/Todo/{id}";
+
+
         }
     }
 }
